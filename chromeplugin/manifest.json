@@ -1,0 +1,39 @@
+{
+  "background_page": "background.html",
+  "name": "Proxycompresser",
+  "version": "0.1",
+  "description": "A simple application controlling an image-compressing web-proxy.",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "popup": "popup.html"
+  },
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" 
+  },
+  "content_scripts": 
+  [ 
+    {
+      "all_frames": true,
+      "js": ["jquery.js","switch_images.js"],
+      "matches": [ "http://*/*"],
+      "run_at": "document_idle"
+    },
+    {
+     "all_frames": true,
+     "js": ["use_proxy.js"],
+     "matches": [ "http://*/*"],
+     "run_at": "document_start"
+    }
+  
+  ],
+  
+  "permissions": [
+    "experimental",
+    "tabs",
+    "bookmarks",
+    "proxy",
+    "http://*/",
+    "https://*/"
+  ]
+}

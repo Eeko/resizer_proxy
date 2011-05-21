@@ -1,0 +1,17 @@
+Compress-proxy 0.1
+
+This is a simple prototype/proof-of-concept of a system intended for bandwidth & traffic conservation on volume-restricted Internet-traffic. The system consists of a simple python-script running a proxy server (powered by Twisted and Python Image Library) and a Google Chrome plugin utilizing the chrome.experimental APIs to be found on most recent releases of Chrome (Beta, Developer and Canary should work, if experimental APIs are allowed in chrome://flags)
+
+The folder "compressproxy" contains the proxy-script, "chromeplugin" contains the files for the browser-extension and "samplepage" contains a simple html-page supposedly compatible with this system. Suitable for experimentingand evaluating the technique.
+
+Made for a school-project in 2011. Stored in Github to reliably backup the code.
+
+More documentation available if requested.
+
+All my original work, CC-BY-SA 3.0
+
+-- 
+/eeko
+http://eeko.iki.fi/
+
+

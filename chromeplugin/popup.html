@@ -1,0 +1,40 @@
+<style>
+body {
+  min-width:250px;
+  overflow-x:hidden;
+}
+
+#header2 {
+  max-width:240px;
+}
+</style>
+<html>
+  <head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="popupscripts.js"></script>
+  </head>
+  <body>        
+
+    <div class="header2">
+      <input type="range" min="0" max="3" id="compression_slider" onChange="sliderModified(this.value)"/>
+      <label for="compression_slider">compression rate</label>
+      <div id="compression_rate">Off</div>
+    </div>
+    
+    <div class="header2" id="settings"><br/>
+      
+      <input type="text" id="proxy_address" name="PAddress" />
+      <label for="proxy_address">proxy address</label><br/>
+      
+      <input type="text" id="proxy_port" name="PPort" />
+      <label for="proxy_port">proxy port</label><br/>
+      
+      <input type="text" id="control_port" name="CPort" />
+      <label for="control_port">proxy-control port</label>
+
+      <br/>
+      <a href="javascript:setProxy()">Set Proxy!</a>
+    </div>
+
+  </body>
+</html>
